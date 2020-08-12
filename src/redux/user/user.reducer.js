@@ -1,3 +1,4 @@
+import {userActionTypes} from './user.types'
 //reducer is just a function that gets state object and a recieved action
 
 
@@ -13,7 +14,7 @@ const INITIAL_STATE = {
 
 const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'SET_CURRENT_USER':
+        case userActionTypes.SET_CURRENT_USER:
             return {
                 // spread everything else on state, ...state, bc you only want to modify the values you care about
                 ...state,
